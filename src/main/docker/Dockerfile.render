@@ -5,7 +5,7 @@ ENV LANGUAGE='en_US:en'
 COPY --chown=185 . ./app
 
 WORKDIR ./app
-RUN gradle build
+RUN gradlew build
 
 EXPOSE 8080
 USER 185
