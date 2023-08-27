@@ -22,8 +22,6 @@ RUN chown 1001 /work \
     && chown 1001:root /work
 COPY --chown=1001:root build/*-runner /work/application
 
-RUN ./gradlew build -Dquarkus.package.type=native
-
 EXPOSE 8080
 USER 1001
 
