@@ -35,7 +35,7 @@ public class TariffController {
         return objectMapper.writer(prettyPrinter).writeValueAsString(tariffs);
     }
 
-    /*@GET
+    @GET
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/db")
     public String getMobileTariffsFromDB() throws JsonProcessingException {
@@ -43,14 +43,14 @@ public class TariffController {
         DefaultPrettyPrinter prettyPrinter = new DefaultPrettyPrinter();
         prettyPrinter.indentArraysWith(DefaultIndenter.SYSTEM_LINEFEED_INSTANCE);
         return objectMapper.writer(prettyPrinter).writeValueAsString(tariffs);
-    }*/
+    }
 
-    /*@POST
+    @POST
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/db")
     public String saveMobileTariffs() {
         List<MTSMobileTariff> tariffs = mtsTariffService.getMTSMobileTariffsFromWeb();
         mtsTariffService.saveAll(tariffs);
         return "Success!";
-    }*/
+    }
 }
